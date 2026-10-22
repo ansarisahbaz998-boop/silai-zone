@@ -1,0 +1,6 @@
+{
+  "name": "Silai Zone - Boutique & Tailoring Studio",
+  "description": "Silai Zone - Sasta Mein Shandaar Silai. Custom ladies & girls tailoring boutique in Kulti. Salwar suits, designer blouses, lehengas, digital naap measurement slip, instant booking and portfolio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

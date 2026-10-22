@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #2b2326;
+    background-color: #fdfbf7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-boutique {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-brand {
+    font-family: 'Cinzel', Georgia, serif;
+  }
+}
+
+/* Custom marquee animation for seamless right-to-left infinite scroll */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Touch active pause */
+.animate-marquee:active {
+  animation-play-state: paused;
+}
+
+/* Subtle boutique shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-gold {
+  background: linear-gradient(90deg, #ca8a04 0%, #fef08a 50%, #ca8a04 100%);
+  background-size: 200% 100%;
+  animation: shimmer 4s infinite linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gold border gradient */
+.border-gold-gradient {
+  border-image: linear-gradient(to right, #d4af37, #f3e5ab, #aa771c) 1;
+}
+
+/* Custom scrollbar for mobile drawers & tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf2f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #f472b6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #db2777;
+}
+
+/* Print styles specifically for Naap (Measurement) Slip */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-measurement-slip, #printable-measurement-slip * {
+    visibility: visible;
+  }
+  #printable-measurement-slip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white;
+    color: black;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

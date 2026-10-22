@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831843" />
+      <stop offset="50%" stop-color="#701a75" />
+      <stop offset="100%" stop-color="#4a044e" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle/rounded rect -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+
+  <!-- Outer gold ornamental border -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="url(#gold)" stroke-width="4" stroke-dasharray="8 6" opacity="0.6"/>
+  <circle cx="256" cy="256" r="198" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.4"/>
+
+  <!-- Sewing Machine & Thread Art -->
+  <g filter="url(#shadow)" transform="translate(256, 235) scale(0.9) translate(-256, -240)">
+    <!-- Base plate -->
+    <rect x="130" y="310" width="252" height="24" rx="6" fill="url(#gold)" />
+    
+    <!-- Machine arm and pillar -->
+    <path d="M160 310 L160 210 C160 170 190 150 240 150 L340 150 C360 150 376 166 376 186 L376 250 C376 260 368 268 358 268 L340 268 L340 220 L240 220 C220 220 210 230 210 250 L210 310 Z" fill="url(#gold)"/>
+    
+    <!-- Needle bar -->
+    <rect x="335" y="260" width="6" height="42" fill="#ffffff" rx="2" />
+    <polygon points="338,302 334,310 342,310" fill="#ffffff" />
+    
+    <!-- Handwheel on right -->
+    <ellipse cx="156" cy="230" rx="14" ry="34" fill="url(#gold)" stroke="#831843" stroke-width="3"/>
+    
+    <!-- Spool of thread on top -->
+    <rect x="185" y="125" width="22" height="26" rx="4" fill="#fb7185" />
+    <line x1="185" y1="130" x2="207" y2="130" stroke="url(#gold)" stroke-width="2"/>
+    <line x1="185" y1="138" x2="207" y2="138" stroke="url(#gold)" stroke-width="2"/>
+    <line x1="185" y1="146" x2="207" y2="146" stroke="url(#gold)" stroke-width="2"/>
+    <line x1="196" y1="125" x2="196" y2="115" stroke="url(#gold)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Thread line swooshing -->
+    <path d="M196 115 Q260 110 338 250" fill="none" stroke="#fbcfe8" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 3"/>
+
+    <!-- Measuring Tape Wave underneath -->
+    <path d="M120 345 C160 360 200 335 256 350 C312 365 352 340 392 355" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand text in icon -->
+  <text x="256" y="420" font-family="'Cinzel', 'Playfair Display', Georgia, serif" font-size="34" font-weight="bold" fill="url(#gold)" text-anchor="middle" letter-spacing="4">SILAI ZONE</text>
+  <text x="256" y="446" font-family="'Poppins', sans-serif" font-size="14" font-weight="600" fill="#fbcfe8" text-anchor="middle" letter-spacing="2">BOUTIQUE &amp; TAILOR</text>
+</svg>
